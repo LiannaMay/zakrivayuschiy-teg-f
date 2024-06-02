@@ -1,1 +1,33 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --inter_text: 'Inter-Variable';
+    --accent_text: 'Press Start 2P';
+
+    --bg_color: #FFFFFF;
+    --accent_color: rgba(0, 0, 0, .6);
+
+    --weight_normal: 400;
+    --weight_bold: 700;
+
+    --color_gradient-top:rgba(211, 211, 211, 1);
+    --color_gradient_bottom:rgba(211, 211, 211, 0);
+    --color_linear_top:rgb(231, 231, 231,1);
+    --color_lineat_bottom:rgb(26, 26, 26,1);
+
+    --text_color:rgba(0, 0, 0, 1);
+
+    --interval-xxl: 372px;
+    --interval-xl: 102px;
+    --interval-l: 136px;
+    --interval-m: 25px;
+    --interval-s: 20px;
+
+    --line_height-xxl: 65px;
+    --line_height-xl: 49px;
+    --line_height-l: 23px;
+    --line_height-m: 21.78px;
+    --line_height-s: 21px;
+    --line_height-xs: 14px;
+    --line_height-xxs: 12.6px;
+
+}
