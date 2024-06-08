@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--inter_text), sans-serif;
-  font-variation-settings: var(--weight_normal);
+  font-variation-settings: "wgth" var(--weight_normal);
   background-color: var(--bg_color);
   color: var(--text_color);
   background-image: repeating-linear-gradient(
