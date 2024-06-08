@@ -56,7 +56,6 @@
 }
 
 .title_header {
-  font-weight: var(--weight_bold);
   line-height: var(--line_height-xxl);
   color: var(--text_color);
   padding: var(--interval-l) 0 var(--interval-s) 0;
@@ -209,12 +208,12 @@
 }
 /* --------------------------------- */
 .title_section {
+  font-variation-settings: 'wgth' var(--weight_bold), 'slnt' 0;
   font-size: 18px;
   padding-block: 5px;
   padding-inline: 10px;
   text-align: left;
   /* text-wrap: wrap; */
-  font-weight: var(--weight_bold);
   line-height: 22px;
   font-style: normal;
 }
