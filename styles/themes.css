@@ -15,9 +15,29 @@
     --color_lineat_bottom:rgba(0, 67, 6 , 1);
     --text_color:rgba(0, 204, 20, 1);
 
+    --watermark-color:rgba(0, 204, 20, 1);
+    --watermark-shadow:rgba(0, 0, 0, 1);
+
+    --text-color-reverse:rgba(0, 204, 20, 1);
+
+    --countur-heart:rgba(0, 204, 20, 1);
+    --sparks-heart:rgba(255, 0, 0, 1);
+    --body-heart-hover:rgba(0, 204, 20, 1);
+    --body-heart-active:rgba(255, 0, 0, 1);
 }
 
 :root.theme-light {
+    --body-heart-active:rgba(255, 0, 0, 1);
+    --body-heart-hover:rgba(0, 0, 0, 1);
+    --sparks-heart:rgba(255, 0, 0, 1);
+    --countur-heart:rgba(0, 0, 0, 1);
+
+
+    --text-color-reverse:#fff;
+
+    --watermark-color:rgba(0, 0, 0, 1);
+    --watermark-shadow:rgba(255, 255, 255, 1);
+    
     --bg_color: #FFFFFF;
     --accent_color: rgba(0, 0, 0, 0.6);
     --weight_normal: 400;
@@ -27,4 +47,48 @@
     --color_linear_top:rgba(231, 231, 231,1);
     --color_lineat_bottom:rgba(26, 26, 26,1);
     --text_color:rgba(0, 0, 0, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg_color: #000;
+        --accent_color: rgba(0, 204, 20, 0.6);
+        --weight_normal: 465;
+        --weight_bold: 785;
+        --color_gradient-top:rgba(0, 0, 0,1);
+        --color_gradient_bottom:rgba(211, 211, 211, 0);
+        --color_linear_top:rgba(0, 127, 12 , 1);
+        --color_lineat_bottom:rgba(0, 67, 6 , 1);
+        --text_color:rgba(0, 204, 20, 1);
+
+        --watermark-color:rgba(0, 204, 20, 1);
+        --watermark-shadow:rgba(0, 0, 0, 1);
+
+        --text-color-reverse:rgba(0, 204, 20, 1);
+        --countur-heart:rgba(0, 204, 20, 1);
+
+        --sparks-heart:rgba(255, 0, 0, 1);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --sparks-heart:rgba(255, 0, 0, 1);
+        --countur-heart:rgba(0, 0, 0, 1);
+
+        --text-color-reverse:#fff;
+
+        --watermark-color:rgba(0, 0, 0, 1);
+        --watermark-shadow:rgba(255, 255, 255, 1);
+        
+        --bg_color: #FFFFFF;
+        --accent_color: rgba(0, 0, 0, 0.6);
+        --weight_normal: 400;
+        --weight_bold: 700;
+        --color_gradient-top:rgba(211, 211, 211, 1);
+        --color_gradient_bottom:rgba(211, 211, 211, 0);
+        --color_linear_top:rgba(231, 231, 231,1);
+        --color_lineat_bottom:rgba(26, 26, 26,1);
+        --text_color:rgba(0, 0, 0, 1);
+    }
 }

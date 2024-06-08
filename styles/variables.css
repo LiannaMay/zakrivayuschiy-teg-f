@@ -16,6 +16,10 @@
 
     --text_color:rgba(0, 0, 0, 1);
 
+    
+    --watermark-color:rgba(0, 0, 0, 1);
+    --watermark-shadow:rgba(255, 255, 255, 1);
+
     --interval-xxl: 372px;
     --interval-xl: 102px;
     --interval-l: 136px;

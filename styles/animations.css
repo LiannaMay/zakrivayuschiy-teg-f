@@ -33,3 +33,31 @@
     color: var(--accent_color);
   }
 }
+
+@keyframes hoverbutton {
+  from {
+    color: var(--text_color);
+  }
+  to {
+    color: var(--accent_color);
+  }
+}
+
+/* АНИМАЦИИ ДЛЯ СЕРДЕЧКА ВО ВРЕМЯ КЛИКА (ИЗМЕНЕНИЕ МАСШТАБА И ИСКРЫ) */
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
