@@ -29,3 +29,11 @@
   font-display: swap;
   font-weight: 400 785;
 }
+
+@font-face {
+    font-family: 'Inter-Variable';
+    src: local("Inter-Variable"),
+      url(./Inter-Variable.woff2) format('woff2-variation');
+    font-display: swap;
+    font-weight: 400 785;
+  }
