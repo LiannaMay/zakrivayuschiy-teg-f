@@ -13,20 +13,19 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-
 /* АНИМАЦИЯ СТРЕЛОЧКИ МЕНЮ */
 @keyframes menu {
-    from {
-      left: -15px;
-    }
-    to {
-      left: -11px;
-    }
+  from {
+    left: -15px;
   }
+  to {
+    left: -11px;
+  }
+}
 
 /* АНИМАЦИЯ ИЗМЕНЕНИЯ ЦВЕТА ТЕКСТА МЕНЮ */
-@keyframes list{
-  from{
+@keyframes list {
+  from {
     color: var(--text_color);
   }
   to {

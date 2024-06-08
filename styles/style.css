@@ -22,18 +22,18 @@
   background-color: var(--bg_color);
   color: var(--text_color);
   background-image: repeating-linear-gradient(
-      180deg,
-      var(--color_gradient-top) 0,
-      var(--color_gradient-top) 2px,
-      var(--color_gradient_bottom) 3px,
-      var(--color_gradient_bottom) 5px
-    ),
-    repeating-linear-gradient(
       90deg,
       var(--color_gradient-top) 0,
       var(--color_gradient-top) 2px,
-      var(--color_gradient_bottom) 3px,
-      var(--color_gradient_bottom) 5px
+      var(--color_gradient_bottom) 2px,
+      var(--color_gradient_bottom) 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--color_gradient-top) 0,
+      var(--color_gradient-top) 2px,
+      var(--color_gradient_bottom) 2px,
+      var(--color_gradient_bottom) 4px
     ),
     linear-gradient(180deg, var(--color_linear_top), var(--color_lineat_bottom));
   background-position: fixed;
