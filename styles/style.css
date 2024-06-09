@@ -508,6 +508,8 @@ dialog:not([open]) {
   text-transform: uppercase;
 }
 .dialog-disceta {
+  width: 39px;
+  height: 39px;
   position: relative;
   z-index: 2;
   color: var(--text-color-reverse);
