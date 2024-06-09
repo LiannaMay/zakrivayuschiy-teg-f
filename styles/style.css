@@ -459,7 +459,7 @@
   height: 21px;
   position: relative;
   z-index: 2;
-  fill: var(--text-color-reverse);
+  color: var(--text-color-reverse);
   mix-blend-mode: difference;
 }
 
@@ -508,11 +508,9 @@ dialog:not([open]) {
   text-transform: uppercase;
 }
 .dialog-disceta {
-  width: 40px;
-  height: 40px;
   position: relative;
   z-index: 2;
-  fill: var(--text-color-reverse);
+  color: var(--text-color-reverse);
   mix-blend-mode: difference;
 }
 
