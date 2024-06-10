@@ -1,6 +1,6 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --inter_text: "Inter-Variable";
+  --basic_text: "Inter-Variable";
   --accent_text: "PressStart2P";
 
   --bg_color: #ffffff;

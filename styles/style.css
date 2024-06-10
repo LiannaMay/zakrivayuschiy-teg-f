@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--inter_text), sans-serif;
+  font-family: var(--basic_text, "Inter-Variable"), sans-serif;
   font-variation-settings: "wght" var(--weight_normal), "slnt" 0;
   background-color: var(--bg_color);
   color: var(--text_color);
@@ -36,7 +36,7 @@
       var(--color_gradient_bottom) 4px
     ),
     linear-gradient(180deg, var(--color_linear_top), var(--color_lineat_bottom));
-  background-position: fixed;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -51,7 +51,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: var(--accent_text), monospace;
+  font-family: var(--accent_text), fantasy;
   text-transform: uppercase;
 }
 /* ЗАГОЛОВОК ШАПКИ САЙТА */
@@ -62,42 +62,54 @@
   padding: var(--interval-l) 0 var(--interval-s) 0;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
+
 /* ПОДЗАГОЛОВОК ШАПКИ САЙТА */
+
 .text_title {
   font-weight: var(--weight_normal);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  padding: 1px 0 22px 0;
+  padding: 1px 0 25px 0;
   line-height: var(--line_height-l);
 }
+
 /* МЕНЮ */
+
 .theme-menu {
   display: flex;
   justify-content: space-between;
   color: var(--text_color);
 }
+
+.theme-menu__item {
+  position: relative;
+  color: var(--text_color);
+  font-size: 14px;
+  font-family: var(--accent_text), fantasy;
+  font-weight: var(--weight_normal);
+  line-height: var(--line_height-xs);
+}
 /* ПУНКТ МЕНЮ */
+
 .theme-menu__list {
   display: flex;
   align-items: start;
   justify-content: space-between;
   flex-direction: column;
-  gap: 14px;
-  padding: 0 0 21px 20px;
+  gap: 10px;
+  padding: 0 0 25px 13px;
 }
+
 /* КНОПКА МЕНЮ */
+
 .theme-menu__button {
-  position: relative;
-  color: var(--text_color);
   text-transform: uppercase;
   cursor: pointer;
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 14px;
-  font-family: var(--accent_text), monospace;
-  font-weight: var(--weight_normal);
-  line-height: var(--line_height-xs);
   transition: 0.3s;
+  padding-left: auto;
+  padding-right: 0;
 }
 
 /* ФОКУС НА КНОПКИ МЕНЮ */
@@ -116,7 +128,11 @@
 }
 
 .theme-menu__button:focus-visible::after {
-  width: 100%;
+  width: 95%;
+}
+
+.theme-menu__button:focus-visible {
+  color: var(--accent_color);
 }
 
 /* -------------------------------------- */
@@ -136,7 +152,8 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  left: -15px;
+  left: -8px;
+  top: 0px;
   color: var(--accent_color);
   animation: menu 0.5s infinite ease-in-out alternate;
 }
@@ -144,7 +161,7 @@
 .theme-menu__button:disabled {
   color: var(--accent_color);
   pointer-events: none;
-  animation: list 0.3s 1 ease normal;
+  /* animation: list 0.3s 1 ease normal; */
 }
 
 /* ------------------------------------------------ */
@@ -184,7 +201,10 @@
 /* БЛОК С КАРТИНКОЙ И ВОТЕРМАРКОЙ */
 
 .card_picture {
+  display: flex;
+  justify-content: center;
   position: relative;
+  border: 2px solid var(--text_color);
 }
 
 .picture {
@@ -269,9 +289,9 @@
 }
 
 .text_section-general {
+  font-variation-settings: "wght" var(--weight_normal), "slnt" 0;
   letter-spacing: 1px;
   text-align: left;
-  font-weight: var(--weight_normal);
   line-height: var(--line_height-s);
   font-size: 18px;
 }
@@ -279,19 +299,25 @@
 /* КНОПКИ СЕРДЕЧКО И ЛАЙК */
 
 .likes-element {
-  padding: 0 25px 18px 0;
+  padding: 0 26px 18px 0;
   align-items: center;
   position: relative;
   display: flex;
+  gap: 8px;
   justify-content: end;
   color: var(--bg_color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: var(--line_height-xxs);
+  font-family: var(--accent_text, "PressStart2P"), sans-serif;
 }
 
 /* КНОПКА ЛАЙК */
 
 .card__like-button {
   position: relative;
-  padding: 8.5px 36px;
+  width: 130px;
+  height: 38px;
   background-color: transparent;
   border: 2px solid var(--text_color);
   cursor: pointer;
@@ -326,24 +352,22 @@
 .button__text {
   position: relative;
   z-index: 2;
-  font-family: var(--accent_text);
   mix-blend-mode: difference;
   color: var(--text-color-reverse);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: var(--line_height-xxs);
 }
 
 /* КНОПКА СЕРДЕЧКО */
 
 .card__icon-button {
   display: flex;
-  justify-content: start;
-  width: 46px;
-  height: 36.5px;
+  justify-content: end;
+  align-items: center;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button:focus {
@@ -366,7 +390,7 @@
 
 .main-body {
   fill: transparent;
-  transition: fill 0.3s 0.05s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
@@ -385,16 +409,20 @@
   transition: fill 0.3s 0.03s linear;
 }
 
+.like-icon .contour {
+  transition: fill 0.3s 0.06s linear;
+}
+
 /* ИЗМЕНЕНИЯ ПРИ РАЗНЫХ СОСТОЯНИЯХ */
 
 .like-icon:hover .core {
   fill: var(--body-heart-hover);
-  transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:active .core {
   fill: var(--body-heart-active);
-  transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .contour {
@@ -404,12 +432,12 @@
 
 .like-icon.is-liked .core {
   fill: var(--body-heart-active);
-  transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--body-heart-active);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon.is-liked .sparks {
@@ -426,10 +454,15 @@
 /* ПОДВАЛ САЙТА */
 
 .footer {
-  margin: 50px 0 103px 0;
+  margin: 0 0 103px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--bg_color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: var(--line_height-xxs);
+  font-family: var(--accent_text, "PressStart2P"), sans-serif;
 }
 
 .footer_button {
@@ -495,8 +528,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 dialog:not([open]) {
@@ -508,15 +540,18 @@ dialog:not([open]) {
   display: flex;
   gap: 20px;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .text-dialog {
-  font-family: var(--accent_text), monospace;
+  position: relative;
+  z-index: 3;
+  font-family: var(--accent_text), fantasy;
   font-size: 14px;
   line-height: var(--line_height-s);
-  color: var(--text_color);
+  mix-blend-mode: difference;
+  color: var(--text-color-reverse);
   max-width: 234px;
   font-weight: 400;
   text-transform: uppercase;
@@ -598,5 +633,9 @@ dialog:not([open]) {
 
   .dialog-button {
     padding: 8.5px 124px;
+  }
+
+  .text-dialog {
+    max-width: 198px;
   }
 }
