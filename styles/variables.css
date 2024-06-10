@@ -1,5 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+
+  --body-heart-active: rgba(255, 0, 0, 1);
+  --body-heart-hover: rgba(0, 0, 0, 1);
+  --sparks-heart: rgba(255, 0, 0, 1);
+  --countur-heart: rgba(0, 0, 0, 1);
+  
   --basic_text: "Inter-Variable";
   --accent_text: "PressStart2P";
 
